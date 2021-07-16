@@ -1,0 +1,23 @@
+name: Checkmarx AST Scan
+on:
+  push:
+    branches:
+      - main
+      - master
+      - dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkmarx AST CLI Action
+        uses: checkmarxDev/ast-github-action@master #Github Action version
+        with:
+          project_name: GHAction_AG_BodgeItTeste
+          cx_tenant: Organization
+          base_uri: https://ast-master.dev.cxast.net/ 
+          cx_client_id: ${{ secrets.CLIENT_ID }}
+          cx_client_secret: ${{ secrets.SECRET }}
+          scan_types: sast,kics,sca
+          additional_params: -v --sast-preset-name High
