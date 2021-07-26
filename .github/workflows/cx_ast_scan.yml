@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Checkmarx AST CLI Action
-        uses: checkmarxDev/ast-github-action@feature/AST-3033_remove_scan_type #Github Action version
+        uses: checkmarxDev/ast-github-action@AST-3033_remove_scan_types #Github Action version
         with:
           project_name: GHAction_AG_BodgeItTeste
           cx_tenant: organization
