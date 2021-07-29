@@ -18,5 +18,5 @@ jobs:
           cx_tenant: organization
           base_uri: https://ast-master.dev.cxast.net/ 
           cx_client_id: ${{ secrets.CX_CLIENT_ID }}
-          cx_client_secret:	${{ secrets.CX_CLIENT_SECRET }}
+          cx_client_secret:	${{ secrets.SECRET }}
           additional_params: -v --sast-preset-name High --scan-types kics
