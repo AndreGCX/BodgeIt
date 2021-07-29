@@ -17,6 +17,5 @@ jobs:
           project_name: GHAction_AG_BodgeItTeste
           cx_tenant: organization
           base_uri: https://ast-master.dev.cxast.net/ 
-          cx_client_id: ${{ secrets.CLIENT_ID }}
-          cx_client_secret: ${{ secrets.SECRET }}
+          cx_apikey: ${{ secrets.CX_APIKEY }}
           additional_params: -v --sast-preset-name High --scan-types kics
